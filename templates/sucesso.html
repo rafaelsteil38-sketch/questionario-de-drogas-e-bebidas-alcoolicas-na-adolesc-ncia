@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- 🔥 IMPORTANTE PRA CELULAR -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sucesso</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+
+            width: 90%;        /* 🔥 adapta no celular */
+            max-width: 350px;  /* limite no PC */
+
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+            /* animação */
+            opacity: 0;
+            transform: translateY(30px);
+            animation: surgir 0.8s ease forwards;
+        }
+
+        @keyframes surgir {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            font-size: 22px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;   /* 🔥 botão ocupa toda largura no celular */
+            padding: 12px;
+
+            border: none;
+            border-radius: 8px;
+
+            background: #667eea;
+            color: white;
+            font-size: 16px;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #5a67d8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h2>✅ Enviado com sucesso!</h2>
+        <p>Seus dados foram salvos.</p>
+
+        <a href="/">
+            <button>Voltar</button>
+        </a>
+    </div>
+
+</body>
+</html>

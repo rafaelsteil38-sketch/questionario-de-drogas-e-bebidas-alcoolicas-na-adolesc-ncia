@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Questionário sobre álcool e drogas na adolescência</h2>
+
+<form action="/enviar" method="POST">
+
+     <p>1. Qual é a sua idade?</p>
+
+    <label class="opcao">
+        <input type="radio" name="q1" value="Menos de 12 anos" required> Menos de 12 anos
+    </label>
+
+    <label class="opcao">
+        <input type="radio" name="q1" value="12 a 14 anos"> 12 a 14 anos
+    </label>
+
+    <label class="opcao">
+        <input type="radio" name="q1" value="15 a 17 anos"> 15 a 17 anos
+    </label>
+
+    <label class="opcao">
+        <input type="radio" name="q1" value="18 anos ou mais"> 18 anos ou mais
+    </label>
+
+    <p>2. Com que frequência você vê adolescentes consumindo álcool?</p>
+    <label class="opcao">
+        <input type="radio" name="q2" value="Nunca" required> Nunca
+    </label>
+    <label class="opcao">
+        <input type="radio" name="q2" value="Raramente"> Raramente
+    </label>
+    <label class="opcao">
+        <input type="radio" name="q2" value="Às vezes"> Às vezes
+    </label>
+
+    <p>3. Você acredita que o uso de álcool é comum entre adolescentes?</p>
+    <label class="opcao">
+        <input type="radio" name="q3" value="Sim" required> Sim
+    </label>
+    <label class="opcao">
+        <input type="radio" name="q3" value="Não"> Não
+    </label>
+    <label class="opcao">
+        <input type="radio" name="q3" value="Talvez"> Talvez
+    </label>
+
+    <p>4. Qual você acha que é o principal motivo para adolescentes usarem drogas?</p>
+    <label class="opcao">
+        <input type="radio" name="q4" value="Influência de amigos" required> Influência de amigos
+    </label>
+    <label class="opcao">
+        <input type="radio" name="q4" value="Curiosidade"> Curiosidade
+    </label>
+    <label class="opcao">
+        <input type="radio" name="q4" value="Problemas pessoais"> Problemas pessoais
+    </label>
+    <label class="opcao">
+        <input type="radio" name="q4" value="Outros"> Outros
+    </label>
+
+    <p>5. Você acha que o uso de álcool pode prejudicar o desempenho escolar?</p>
+    <label class="opcao">
+        <input type="radio" name="q5" value="Sim" required> Sim
+    </label>
+    <label class="opcao">
+        <input type="radio" name="q5" value="Não"> Não
+    </label>
+    <label class="opcao">
+        <input type="radio" name="q5" value="Talvez"> Talvez
+    </label>
+
+    <p>6. Seus pais ou responsáveis conversam com você sobre drogas e álcool?</p>
+    <label class="opcao">
+        <input type="radio" name="q6" value="Sim" required> Sim
+    </label>
+    <label class="opcao">
+        <input type="radio" name="q6" value="Não"> Não
+    </label>
+
+    <p>7. Você se sente pressionado(a) por amigos a experimentar álcool ou drogas?</p>
+    <label class="opcao">
+        <input type="radio" name="q7" value="Sim" required> Sim
+    </label>
+    <label class="opcao">
+        <input type="radio" name="q7" value="Não"> Não
+    </label>
+    <label class="opcao">
+        <input type="radio" name="q7" value="Às vezes"> Às vezes
+    </label>
+
+    <p>8. Você considera "Dano ao desinvolvimento cerebral, dano à saúde física e mental, danos sociais e comportamentais" como risco para o adolescente
+    </p>
+    <label class="opcao">
+        <input type="radio" name="q8" value="Sim" required> Sim
+    </label>
+    <label class="opcao">
+        <input type="radio" name="q8" value="Não"> Não
+    </label>
+    <label class="opcao">
+        <input type="radio" name="q8" value="Um pouco"> Um pouco
+    </label>
+
+    <p>9. Na sua opinião, a escola deveria falar mais sobre esse assunto?</p>
+    <label class="opcao">
+        <input type="radio" name="q9" value="Sim" required> Sim
+    </label>
+
+    <label class="opcao">
+        <input type="radio" name="q9" value="Não"> Não
+    </label>
+
+    <label class="opcao">
+        <input type="radio" name="q9" value="Talvez"> Talvez
+    </label>
+  
+    <p>10. Você já teve contato com bebidas alcoólicas ou drogas?</p>
+    <label class="opcao">
+        <input type="radio" name="q10" value="Sim" required> Sim
+    </label>
+
+    <label class="opcao">
+        <input type="radio" name="q10" value="Não"> Não
+    </label>
+
+    <br><br>
+    <button type="submit">Enviar</button>
+</form>
+
+<p id="resposta"></p>
+
+
+<!-- <script src="{{ url_for('static', filename='script.js') }}"></script> -->
+</body>
+</html>

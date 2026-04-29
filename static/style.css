@@ -1,0 +1,134 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: Arial;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+
+    display: flex;
+    flex-direction: column; /* 👈 importante */
+    align-items: center;
+
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container geral (IMPORTANTE) */
+.container {
+    width: 100%;
+    max-width: 520px; /* menor largura */
+    margin: 0 auto;
+}
+/* Título */
+h2 {
+    color: white;
+    text-align: center;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+/* Formulário */
+form {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+
+    width: 95%;
+    max-width: 420px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+
+    backdrop-filter: blur(10px);
+}
+
+/* Perguntas */
+p {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Radios */
+input[type="radio"] {
+    margin-right: 5px;
+    margin-left: 10px;
+}
+
+/* Campo texto */
+input[type="text"] {
+    margin-top: 5px;
+    padding: 8px;
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+/* Botão */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #667eea;
+    color: white;
+    font-size: 16px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #5a67d8;
+    transform: scale(1.02);
+}
+
+@media (max-width: 420px) {
+    .container {
+        max-width: 90%; /* ocupa quase toda a tela do celular */
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+.opcao {
+    display: block;
+    margin: 8px 0;
+    padding: 6px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.opcao:hover {
+    background: #f0f0f0;
+}
