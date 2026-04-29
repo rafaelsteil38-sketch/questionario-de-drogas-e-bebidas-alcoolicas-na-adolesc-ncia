@@ -4,16 +4,24 @@ from supabase import create_client
 
 app = Flask(__name__)
 
-# Pegando variáveis de ambiente (Render)
+# 🔐 Variáveis de ambiente (Render)
 SUPABASE_URL = os.environ.get("SUPABASE_URL")
 SUPABASE_KEY = os.environ.get("SUPABASE_KEY")
 
+# ⚠️ Segurança básica para evitar crash no deploy
+if not SUPABASE_URL or not SUPABASE_KEY:
+    print("ERRO: SUPABASE_URL ou SUPABASE_KEY não configuradas!")
+
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
+
+# 🏠 Página inicial
 @app.route("/")
 def index():
     return render_template("index.html")
 
+
+# 📩 Envio do formulário
 @app.route("/enviar", methods=["POST"])
 def enviar():
     dados = {
@@ -29,10 +37,16 @@ def enviar():
         "q10": request.form.get("q10")
     }
 
-    # Inserir no Supabase
-    supabase.table("respostas").insert(dados).execute()
+    # 💾 Inserir no Supabase
+    try:
+        supabase.table("respostas").insert(dados).execute()
+    except Exception as e:
+        print("Erro ao salvar no Supabase:", e)
 
     return render_template("sucesso.html")
 
+
+# 🚀 Render precisa disso (PORT obrigatório)
 if __name__ == "__main__":
-    app.run()
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
